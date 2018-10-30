@@ -1,0 +1,7 @@
+{
+  "name": "Project_TCC2",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

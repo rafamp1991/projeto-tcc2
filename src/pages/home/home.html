@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <button ion-button>Item 1</button>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <button ion-button>Item 2</button>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <button ion-button>Item 3</button>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <button ion-button>Item 4</button>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <button ion-button>Item 5</button>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <button ion-button>Item 6</button>
+      </ion-item>
+    </ion-col>
+
+      <form action="https://us-central1-project-tcc-4e4be.cloudfunctions.net/enviarEmail" method="post">
+      <label>Assunto:</label>
+      <input type="text" name="assunto">
+
+      <label>Destinatários:</label>
+      <input type="text" name="destinatarios">
+
+      <label>Mensagem:</label>
+      <input type="text" name="corpo">
+
+      <button type="submit">Enviar</button>
+    </form>
+
+  </ion-row>
+
+</ion-content>
