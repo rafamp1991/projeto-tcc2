@@ -23,8 +23,6 @@ exports.enviarEmail = functions.https.onRequest((req, res) => {
         html: corpoHtml
     };
 
-    console.log("alguma coisa");
-
     transporter.sendMail(email, (error, info) => {
         if (error) {
           return console.log(error);

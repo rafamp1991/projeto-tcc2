@@ -1,3 +1,20 @@
 page-home {
-  
+    .btn {
+      height: 100px;
+      width: 100px;
+    }
+    #form_email {
+      position: relative;
+      top: 100px;
+    }
+    .fields {
+      position: relative;
+      padding: 10px;
+      left: 50px;
+    }
+    #btn_send {
+      position: relative;
+      top: 20px;
+      left: 250px;
+    }
 }

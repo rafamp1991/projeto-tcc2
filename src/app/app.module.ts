@@ -17,12 +17,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ContactProvider } from '../providers/contact/contact';
 
 export const firebaseConfig = {
-       apiKey: "AIzaSyCYAIdHOViwbnxVr3uQBOP_qRiyil6KCpQ",
-       authDomain: "project-tcc-8659e.firebaseapp.com",
-       databaseURL: "https://project-tcc-8659e.firebaseio.com",
-       projectId: "project-tcc-8659e",
-       storageBucket: "",
-       messagingSenderId: "58856556445"
+  apiKey: "AIzaSyAIgM5HP90j0pTnKmgJl-JD8WfNMli4cWw",
+  authDomain: "project-tcc-4e4be.firebaseapp.com",
+  databaseURL: "https://project-tcc-4e4be.firebaseio.com",
+  projectId: "project-tcc-4e4be",
+  storageBucket: "project-tcc-4e4be.appspot.com",
+  messagingSenderId: "924161875158"
 };
 
 @NgModule({
