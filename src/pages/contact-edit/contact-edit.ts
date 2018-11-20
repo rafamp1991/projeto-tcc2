@@ -47,6 +47,9 @@ export class ContactEditPage {
       key: [this.contact.key],
       name: [this.contact.name, Validators.required],
       tel: [this.contact.tel, Validators.required],
+      email: [this.contact.email, Validators.required],
+      config5: true,
+      config6: true
     });
   }
 

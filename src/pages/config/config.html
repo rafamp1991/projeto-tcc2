@@ -1,11 +1,60 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Configurações
+      Home Care - Configurações
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+   <ion-list>
+
+	  <ion-item>
+	    <ion-label>Enviar Localização</ion-label>
+	    <ion-toggle [(ngModel)]="config1"></ion-toggle>
+	  </ion-item>
+
+	  <ion-item>
+         <ion-label stacked>Enviar localização a cada: (Minutos) </ion-label>
+         <ion-input type="number"  [(ngModel)]="config6" placeholder="Minutos"></ion-input>
+      </ion-item>
+
+	  <ion-item>
+	    <ion-label>Enviar Email</ion-label>
+	    <ion-toggle [(ngModel)]="config2"></ion-toggle>
+	  </ion-item>
+
+	  <ion-item>
+	    <ion-label>Enviar SMS</ion-label>
+	    <ion-toggle [(ngModel)]="config3"></ion-toggle>
+	  </ion-item>
+
+    <ion-item>
+         <ion-label>Ativar por voz</ion-label>
+         <ion-toggle [(ngModel)]="config7" disabled="true"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+         <ion-label>Ativar por agitação do dispositivo</ion-label>
+         <ion-toggle [(ngModel)]="config8" disabled="true"></ion-toggle>
+    </ion-item>
+
+	  <ion-item>
+         <ion-label>Ligar para Policia</ion-label>
+         <ion-toggle [(ngModel)]="config4" disabled="true"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+       <ion-label>Ligar para Bombeiros</ion-label>
+       <ion-toggle [(ngModel)]="config5" disabled="true"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+       <ion-label>Ligar para Samu</ion-label>
+       <ion-toggle [(ngModel)]="config6" disabled="true"></ion-toggle>
+    </ion-item>
+
+   </ion-list>
 
 </ion-content>

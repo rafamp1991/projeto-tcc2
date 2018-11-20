@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>{{ title }}</ion-title>
+    <ion-title>Novo / Editar</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -8,7 +8,7 @@
   <form [formGroup]="form">
     <ion-item>
       <ion-label stacked>Nome</ion-label>
-      <ion-input type="text" formControlName="name"></ion-input>
+      <ion-input type="text" formControlName="name" placeholder="Digite seu nome"></ion-input>
     </ion-item>
     <ion-item *ngIf="!form.controls.name.valid && (form.controls.name.dirty || form.controls.name.touched)" color="danger">
       <div [hidden]="!form.controls.name.errors.required">
@@ -18,12 +18,32 @@
 
     <ion-item>
       <ion-label stacked>Telefone</ion-label>
-      <ion-input type="tel" formControlName="tel"></ion-input>
+      <ion-input type="tel" placeholder="(xx) xxxxx-xxxx" formControlName="tel"></ion-input>
     </ion-item>
     <ion-item *ngIf="!form.controls.tel.valid && (form.controls.tel.dirty || form.controls.tel.touched)" color="danger">
       <div [hidden]="!form.controls.tel.errors.required">
         O campo é obrigatório
       </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Email</ion-label>
+      <ion-input type="email" placeholder="email@dominio.com" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="!form.controls.email.valid && (form.controls.email.dirty || form.controls.email.touched)" color="danger">
+      <div [hidden]="!form.controls.email.errors.required">
+        O campo é obrigatório
+      </div>
+    </ion-item>
+
+    <ion-item>
+       <ion-label>Ativo</ion-label>
+       <ion-toggle formControlName="config5"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+       <ion-label>Receber periodicamente Localização</ion-label>
+       <ion-toggle formControlName="config6"></ion-toggle>
     </ion-item>
 
     <div padding>

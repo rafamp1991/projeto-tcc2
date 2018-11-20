@@ -1,7 +1,7 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color='primary'>
     <ion-title>
-      Home
+      Home Care APP
     </ion-title>
     <!-- <button right id="btn_logout" (click)="logout()">
       <ion-icon name="md-log-out"></ion-icon>
@@ -9,69 +9,25 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="vertical-align-content">
+  <ion-list>
+    
+    <ion-item no-lines>
+      <button ion-button  color="danger" full large (click)="solicitarAjuda(2)">
+            SOLICITAR AJUDA URGENTE
+            <ion-icon name="nuclear" class="icons"></ion-icon>
+      </button>
+    </ion-item>
 
-  <ion-row>
-    <ion-col>
-      <ion-item>
-        <button ion-button class="btn">
-          <ion-icon name="md-mic" class="icons"></ion-icon>
-        </button>
-      </ion-item>
-    </ion-col>
-    <ion-col>
-      <ion-item>
-        <button ion-button class="btn">
-          <ion-icon name="pin" class="icons"></ion-icon>
-        </button>
-      </ion-item>
-    </ion-col>
-    <ion-col>
-      <ion-item>
-        <button ion-button class="btn">
-          <ion-icon name="search" class="icons"></ion-icon>
-        </button>
-      </ion-item>
-    </ion-col>
-    <ion-col>
-      <ion-item>
-        <button ion-button class="btn">
-          <ion-icon name="ios-people" class="icons"></ion-icon>
-        </button>
-      </ion-item>
-    </ion-col>
-    <ion-col>
-      <ion-item>
-        <button ion-button class="btn">
-          <ion-icon ios="ios-person-add " md="md-person-add" class="icons"></ion-icon>
-        </button>
-      </ion-item>
-    </ion-col>
-    <ion-col>
-      <ion-item>
-        <button ion-button class="btn">
-          <ion-icon name="ios-videocam" class="icons"></ion-icon>
-        </button>
-      </ion-item>
-    </ion-col>
+    <ion-item no-lines>
+      <button ion-button  color="warning" full large (click)="solicitarAjuda(1)">
+            SOLICITAR AJUDA 
+            <ion-icon name="alert" class="icons"></ion-icon>
+      </button>
+    </ion-item>
 
-      <form action="https://us-central1-project-tcc-4e4be.cloudfunctions.net/enviarEmail" method="post" id="form_email">
-        <div class="fields">
-          <label>Assunto:</label>
-          <input type="text" name="assunto">
-        </div>
-        <div class="fields">
-          <label>Destinatários:</label>
-          <input type="text" name="destinatarios">
-        </div>
-        <div class="fields">
-          <label>Mensagem:</label>
-          <input type="text" name="corpo">
-        </div>
 
-        <button type="submit" id="btn_send">Enviar</button>
-      </form>
+  </ion-list>
 
-  </ion-row>
 
 </ion-content>

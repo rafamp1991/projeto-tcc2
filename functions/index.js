@@ -2,9 +2,18 @@
 const functions  = require('firebase-functions');
 const nodemailer = require('nodemailer');
 const cors = require('cors')({origin: true});
+const SMS = require('@ionic-native/sms');
 
 let url = "smtps://app.home.care%40gmail.com:"+encodeURIComponent('saudedomiciliar') + "@smtp.gmail.com:465";
 let transporter = nodemailer.createTransport(url);
+
+exports.enviSMS = functions.https.onRequest((req, res) => {
+  cors(req, res, () => {
+        
+    this.sms.send(req.body['celular'], req.body['msgCelular']);
+
+  });
+});
 
 exports.enviarEmail = functions.https.onRequest((req, res) => {
   cors(req, res, () => {
@@ -31,3 +40,5 @@ exports.enviarEmail = functions.https.onRequest((req, res) => {
     });
   });
 });
+
+

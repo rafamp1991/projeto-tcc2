@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      Contatos
+      Home Care - Contatos
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,10 +9,11 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item-sliding *ngFor="let contact of contacts | async">
+    <ion-item-sliding *ngFor="let contact of contacts">
       <ion-item>
         <h1>{{ contact.name }}</h1>
-        <p>{{ contact.tel }}</p>
+        <p>Celular: {{ contact.tel }}</p>
+        <p>Email: {{ contact.email }}</p>
       </ion-item>
       <ion-item-options side="left">
         <button ion-button color="secondary" (click)="editContact(contact)">
