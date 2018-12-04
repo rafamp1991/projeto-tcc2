@@ -27,12 +27,12 @@ export class ContactProvider {
     return new Promise((resolve, reject) => {
       if (contact.key) {
         this.db.list(this.PATH)
-          .update(contact.key, { name: contact.name, tel: contact.tel })
+          .update(contact.key, { name: contact.name, tel: contact.tel, email: contact.email })
           .then(() => resolve())
           .catch((e) => reject(e));
       } else {
         this.db.list(this.PATH)
-          .push({ name: contact.name, tel: contact.tel })
+          .push({ name: contact.name, tel: contact.tel, email: contact.email })
           .then(() => resolve());
       }
     })

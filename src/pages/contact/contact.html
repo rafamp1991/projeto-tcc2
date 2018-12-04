@@ -9,7 +9,7 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item-sliding *ngFor="let contact of contacts">
+    <ion-item-sliding *ngFor="let contact of contacts | async">
       <ion-item>
         <h1>{{ contact.name }}</h1>
         <p>Celular: {{ contact.tel }}</p>

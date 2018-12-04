@@ -15,6 +15,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ContactProvider } from '../providers/contact/contact';
+import { SMS } from '@ionic-native/sms';
+import { Geolocation } from '@ionic-native/geolocation';
+import { Shake } from '@ionic-native/shake';
+import { HTTP } from '@ionic-native/http';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyAIgM5HP90j0pTnKmgJl-JD8WfNMli4cWw",
@@ -52,7 +56,11 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ContactProvider
+    ContactProvider,
+    SMS,
+    Geolocation,
+    Shake,
+    HTTP
   ]
 })
 export class AppModule {}

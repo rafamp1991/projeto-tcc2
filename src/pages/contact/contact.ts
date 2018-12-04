@@ -12,13 +12,13 @@ export class ContactPage {
 
   constructor(public navCtrl: NavController, private provider: ContactProvider,
     private toast: ToastController) {
-    this.contacts =  [
+    /*this.contacts =  [
       {name:"Rafael Martins de Padua",tel:"(49) 98419-9002",email:"rafael.padua@unochapeco.edu.br"},
       {name:"Contato número 1",tel:"(49) 98404-xxxx",email:"contato1@unochapeco.edu.br"},
       {name:"Contato número 2",tel:"(49) 98404-xxxx",email:"contato2@unochapeco.edu.br"},
       {name:"Contato número 3",tel:"(49) 98404-xxxx",email:"contato3@unochapeco.edu.br"}
-    ]
-   // this.contacts = this.provider.getAll();
+    ];*/
+    this.contacts = this.provider.getAll();
   }
 
   newContact() {
